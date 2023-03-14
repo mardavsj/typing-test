@@ -6,14 +6,14 @@ import useEngine from "./hooks/useEngine";
 
 const App = () => {
 
-  const {state, words, timeLeft} = useEngine();
+  const {state, words, timeLeft, typed} = useEngine();
 
   return (
     <>
       <CountdownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GeneratedWords words={words}/>
-        <Typing className="absolute inset-0" userInput={words}/>
+        <Typing className="absolute inset-0" words={words} userInput={typed}/>
       </WordsContainer>
       <Restart className="mx-auto mt-10 text-slate-500" onRestart={() => null}/>
       <Results className="mt-10" errors={10} accuracyPercentage={100} total={200}/>

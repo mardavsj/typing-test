@@ -31,8 +31,18 @@ const useType = (enabled: boolean) => {
                     setCursor(cursor+1)
                     totalTyped.current += 1
             }
+        },
+        [cursor, enabled]
+    )
 
-    }, [cursor, enabled])
+    const clearTyped = useCallback(() => {
+        setTyped("")
+        setCursor(0)
+    }, [])
+
+    const resetTotalTyped = useCallback(() => {
+        totalTyped.current = 0
+    }, [])
 
     useEffect (() => {
         window.addEventListener("keydown", keydownHandler)
@@ -40,6 +50,14 @@ const useType = (enabled: boolean) => {
             window.removeEventListener("keydown", keydownHandler)
         }
     }, [keydownHandler])
+
+    return {
+        typed,
+        cursor,
+        clearTyped,
+        resetTotalTyped,
+        totalTyped: totalTyped.current
+    }
 }
 
 export default useType
