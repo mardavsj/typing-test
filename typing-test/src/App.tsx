@@ -2,13 +2,15 @@ import { faker } from "@faker-js/faker";
 import Restart from "./components/Restart";
 import Results from "./components/Results";
 import Typing from './components/Typing';
-
-const words = faker.random.words(10)
+import useEngine from "./hooks/useEngine";
 
 const App = () => {
+
+  const {state, words, timeLeft} = useEngine();
+
   return (
     <>
-      <CountdownTimer timeleft={30} />
+      <CountdownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GeneratedWords words={words}/>
         <Typing className="absolute inset-0" userInput={words}/>
@@ -33,8 +35,8 @@ const WordsContainer = ({children}: {children:React.ReactNode}) => {
           </div>
   }
 
-  const CountdownTimer = ({ timeleft } : { timeleft: number }) => {
-    return <h2 className="text-primary-500 font-medium">Time: { timeleft }</h2>
+  const CountdownTimer = ({ timeLeft } : { timeLeft: number }) => {
+    return <h2 className="text-primary-500 font-medium">Time: { timeLeft }</h2>
   }
 
 export default App
