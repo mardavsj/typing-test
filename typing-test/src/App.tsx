@@ -3,10 +3,11 @@ import Restart from "./components/Restart";
 import Results from "./components/Results";
 import Typing from './components/Typing';
 import useEngine from "./hooks/useEngine";
+import { calculateAccuracyPercentage } from './utils/helpers';
 
 const App = () => {
 
-  const {state, words, timeLeft, typed} = useEngine();
+  const {state, words, timeLeft, typed, errors, restart, totalTyped} = useEngine();
 
   return (
     <>
@@ -15,8 +16,8 @@ const App = () => {
         <GeneratedWords words={words}/>
         <Typing className="absolute inset-0" words={words} userInput={typed}/>
       </WordsContainer>
-      <Restart className="mx-auto mt-10 text-slate-500" onRestart={() => null}/>
-      <Results className="mt-10" errors={10} accuracyPercentage={100} total={200}/>
+      <Restart className="mx-auto mt-10 text-slate-500" onRestart={restart}/>
+      <Results className="mt-10" state={state} errors={errors} accuracyPercentage={calculateAccuracyPercentage(errors, totalTyped)} total={totalTyped}/>
     </>
   )
 }
