@@ -6,8 +6,8 @@ import useType from './useType';
 
 export type State = "start" | "run" | "finish"
 
-const NUMBER_OF_WORDS = 20
-const COUNTDOWN_SECONDS = 30
+const NUMBER_OF_WORDS = 30
+const COUNTDOWN_SECONDS = 60
 
 const useEngine = () => {
     const [state, setState ] = useState<State>("start")

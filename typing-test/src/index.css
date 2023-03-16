@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply min-h-screen bg-slate-900 grid place-items-center tracking-widest px-5;
+        @apply min-h-screen bg-black grid place-items-center tracking-widest px-5;
     }
 }
 
