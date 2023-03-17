@@ -25,17 +25,17 @@ const Results = ({
     }
 
     return (
-        <motion.ul className={`flex flex-col items-center text-primary-400 space-y-3 ${className}`}>
-            <motion.li className="text-xl font-semibold" initial={initial} animate={animate} transition={{...duration, delay:0}}>
-                Results 
+        <motion.ul className={`flex flex-col items-center justify-center space-y-3 bg-gray-800 rounded-2xl p-5 ${className}`}>
+            <motion.li className="text-3xl text-center text-yellow-300/90 font-extrabold mb-5 bg-black rounded-2xl w-full p-4" initial={initial} animate={animate} transition={{...duration, delay:0}}>
+                Your Results 
             </motion.li>
-            <motion.li initial={initial} animate={animate} transition={{...duration, delay:0.3}}>
+            <motion.li className="text-slate-200" initial={initial} animate={animate} transition={{...duration, delay:0.3}}>
                 Accuracy: {formatPercentage(accuracyPercentage)}
             </motion.li>
-            <motion.li initial={initial} animate={animate} transition={{ ...duration, delay: 0.6 }}>
+            <motion.li className="text-slate-200" initial={initial} animate={animate} transition={{ ...duration, delay: 0.6 }}>
                 Typed: {total}
             </motion.li>
-            <motion.li className="text-red-500" initial={initial} animate={animate} transition={{ ...duration, delay: 0.9 }}>
+            <motion.li className="text-[#ee1f1f] animate-pulse text-xl font-semibold" initial={initial} animate={animate} transition={{ ...duration, delay: 0.9 }}>
                 Errors: {errors}
             </motion.li>
         </motion.ul>

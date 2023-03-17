@@ -14,7 +14,7 @@ const Typing = ({
     const typedCharacters = userInput.split("");
 
     return (
-        <div className={className}>
+        <div className={` text-slate-300 px-10 ${className}`}>
             {typedCharacters.map((char, index) => {
                 return <Character key={`${char}_${index}`} actual={char} expected={words[index]}/>
             })}
