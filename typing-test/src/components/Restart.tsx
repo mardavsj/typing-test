@@ -16,7 +16,7 @@ const Restart = ({
     }
 
     return (
-        <button onClick={handleRestart} className={`block rounded-2xl px-12 py-3 hover:bg-gray-800 hover:text-white ${className}`}>
+        <button onClick={handleRestart} className={`block object-fill rounded-2xl px-12 py-2 hover:bg-gray-800 hover:text-white ${className}`}>
             <MdRefresh className="w-6 h-7"/>
         </button>
     )
