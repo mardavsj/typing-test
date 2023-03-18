@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-        @apply min-h-screen grid bg-black place-items-center tracking-widest px-5;
+        @apply min-h-screen grid bg-black  place-items-center tracking-widest px-5;
     }
 }
