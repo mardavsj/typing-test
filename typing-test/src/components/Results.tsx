@@ -25,15 +25,15 @@ const Results = ({
     }
 
     return (
-        <motion.ul className={`flex flex-col items-center justify-center space-y-2 bg-gray-800 rounded-2xl p-4 mb-12 ${className}`}>
-            <motion.li className="text-3xl text-center text-yellow-300/90 font-extrabold mb-2 bg-black rounded-2xl w-full p-4" initial={initial} animate={animate} transition={{...duration, delay:0}}>
+        <motion.ul className={`relative w-[1015px] flex flex-col items-center justify-center space-y-2 bg-gray-800 rounded-1/2 p-5  ${className}`}>
+            <motion.li className="text-3xl text-center text-yellow-400/90 font-normal mb-2 bg-black rounded-full w-full p-3" initial={initial} animate={animate} transition={{...duration, delay:0}}>
                 Your Results 
             </motion.li>
             <motion.li className="text-slate-200" initial={initial} animate={animate} transition={{...duration, delay:0.8}}>
                 Accuracy: {formatPercentage(accuracyPercentage)}
             </motion.li>
             <motion.li className="text-slate-200" initial={initial} animate={animate} transition={{ ...duration, delay: 1.6 }}>
-                Typed: {total}
+                Letters typed: {total}
             </motion.li>
             <motion.li className="text-[#ee1f1f] animate-pulse text-xl font-semibold" initial={initial} animate={animate} transition={{ ...duration, delay: 2.4 }}>
                 Errors: {errors}
