@@ -25,8 +25,8 @@ const Results = ({
     }
 
     return (
-        <motion.ul className={`relative w-[1015px] flex flex-col items-center justify-center space-y-2 bg-gray-800 rounded-1/2 p-5  ${className}`}>
-            <motion.li className="text-3xl text-center text-yellow-400/90 font-normal mb-2 bg-black rounded-full w-full p-3" initial={initial} animate={animate} transition={{...duration, delay:0}}>
+        <motion.ul className={`relative w-[1015px] flex flex-col items-center justify-center space-y-2 bg-gray-800 rounded-md p-5  ${className}`}>
+            <motion.li className="text-3xl text-center text-yellow-600 font-normal mb-2 bg-black rounded-full w-full p-3" initial={initial} animate={animate} transition={{...duration, delay:0}}>
                 Your Results 
             </motion.li>
             <motion.li className="text-slate-200" initial={initial} animate={animate} transition={{...duration, delay:0.8}}>
