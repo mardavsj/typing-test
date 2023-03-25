@@ -14,7 +14,7 @@ const Typing = ({
     const typedCharacters = userInput.split("");
 
     return (
-        <div className={` text-slate-300 px-10 ${className}`}>
+        <div className={`px-10 ${className}`}>
             {typedCharacters.map((char, index) => {
                 return <Character key={`${char}_${index}`} actual={char} expected={words[index]}/>
             })}
@@ -31,8 +31,8 @@ const Character = ({actual, expected}:{actual:string, expected:string}) => {
     return (
         <span className={cn({
             "text-red-700": !isCorrect && !isWhiteSpace,
-            "text-primary-500": isCorrect && !isWhiteSpace,
-            "bg-red-500/50": !isCorrect && isWhiteSpace
+            "text-slate-200": isCorrect && !isWhiteSpace,
+            "bg-red-500": !isCorrect && isWhiteSpace
         })}>
             {expected}
         </span>
