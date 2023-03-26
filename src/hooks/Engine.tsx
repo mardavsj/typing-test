@@ -1,5 +1,5 @@
 import { useCallback, useState, useEffect } from "react"
-import { countErrors } from "../utils/helpers";
+import { countErrors } from "../utils/help";
 import useTimer from "./Timer"
 import useWords from "./Words"
 import useType from './Type';

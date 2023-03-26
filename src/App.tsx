@@ -2,7 +2,7 @@ import Restart from "./components/Restart";
 import Results from "./components/Results";
 import Typing from './components/Typing';
 import useEngine from "./hooks/Engine";
-import { calculateAccuracyPercentage } from './utils/helpers';
+import { calculateAccuracyPercentage } from './utils/help';
 import Picture from './assets/pic5.jpg'
 
 const App = () => {
