@@ -7,7 +7,10 @@ const Navbar = () => {
             <a href="https://github.com/mardavsj/typing-test" target="blank"><FaGithub/></a>
             <h1 className=" text-base px-2 text-gray-600/90 hover:text-slate-200 duration-100"><a href="https://github.com/mardavsj/typing-test" target="blank"> Source Code </a></h1>
         </div>
-        <div className="text-base text-gray-600/90 hover:text-slate-200 duration-100 hover:scale-110 cursor-pointer">Readme</div>
+        <div className="text-base text-gray-600/90 hover:text-slate-200 duration-100 hover:scale-110 cursor-pointer">
+          Readme
+          alert
+        </div>
     </div>
   )
 }
