@@ -9,7 +9,6 @@ const Navbar = () => {
         </div>
         <div className="text-base text-gray-600/90 hover:text-slate-200 duration-100 hover:scale-110 cursor-pointer">
           Readme
-          alert
         </div>
     </div>
   )
