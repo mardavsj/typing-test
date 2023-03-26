@@ -1,8 +1,8 @@
 import { useCallback, useState, useEffect } from "react"
 import { countErrors } from "../utils/helpers";
-import useTimer from "./useTimer"
-import useWords from "./useWords"
-import useType from './useType';
+import useTimer from "./Timer"
+import useWords from "./Words"
+import useType from './Type';
 
 export type State = "start" | "run" | "finish"
 
@@ -13,10 +13,8 @@ const useEngine = () => {
     const [state, setState ] = useState<State>("start")
     const {words, updateWords} = useWords(NUMBER_OF_WORDS)
     const {timeLeft, startCountdown, resetCountdown} = useTimer(COUNTDOWN_SECONDS)
-    const {typed, cursor, clearTyped, resetTotalTyped, totalTyped} = useType(state != "finish")
-
+    const {typed, cursor, clearTyped, resetTotalTyped, totalTyped} = useType(state !== "finish")
     const [errors, setErrors] = useState(0)
-
     const isStarting = state === "start" && cursor > 0
     const areWordsFinished = cursor === words.length
 

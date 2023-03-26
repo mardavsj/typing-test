@@ -1,5 +1,5 @@
 import cn from "classnames"
-import Caret from "./Caret";
+import Caret from "./Brain";
 
 const Typing = ({
     userInput,
