@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="text-gray-600/90 text-center mt-[200px] ">Made with ❤️ by Mardav Jadaun </div>
             <div className="flex justify-center items-center py-2">
                 <div className=" cursor-pointer text-2xl text-gray-600/80 hover:text-yellow-600 hover:scale-110 duration-100 px-2 ">
-                    <a href="https://www.instagram.com/mardav_113/" target="blank"><FaInstagram /></a>
+                    <a href="https://www.instagram.com/mardav__13/" target="blank"><FaInstagram /></a>
                 </div>
                 <div className=" cursor-pointer text-2xl text-gray-600/80 hover:text-yellow-600 hover:scale-110 duration-100 px-2 ">
                     <a href="https://twitter.com/mardav_13" target="blank"><FaTwitter /></a>
